@@ -24,9 +24,7 @@ if source :
     st.subheader("Dataframe Display")
     df = pd.read_csv(source)
     st.write(df)
-    figure = sns.pairplot(df, hue=df.keys()[-1])
-    st.subheader("Plotting dataset")
-    st.pyplot(figure)
+    
     values = st.sidebar.slider(
      'test_size : [0,0.5]',
      min_value = 0.1, max_value=0.5, step = 0.05)
